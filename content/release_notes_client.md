@@ -5879,6 +5879,7 @@ description 'The apparmor_policy resource is used to add or remove policy files 
 - Use the current Azure metadata endpoint
 - Correctly detect macOS guests on VMware and VirtualBox
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ## Platform Additions
 
@@ -5886,6 +5887,9 @@ Chef Infra Client packages are now produced for Ubuntu 18.04 and Debian 9 platfo
 =======
 - Please see the [Ohai Changelog](https://github.com/chef/ohai/blob/main/CHANGELOG.md) for the complete list of changes.
 >>>>>>> 20c8f37a1... updated main from master
+=======
+- Please see the [Ohai Changelog](https://github.com/chef/ohai/blob/main/CHANGELOG.md) for the complete list of changes.
+>>>>>>> 20c8f37a19157cdb7f18d054d8437a0011377d29
 
 ## What's New in 13.8.5
 
