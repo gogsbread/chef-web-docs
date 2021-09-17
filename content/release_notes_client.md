@@ -1901,9 +1901,9 @@ provides :foo
 
 We've introduced several Cookstyle rules to detect both custom resources and legacy HWRPs that need to be updated for this change:
 
-**[ChefDeprecations/ResourceUsesOnlyResourceName](https://github.com/chef/cookstyle/blob/master/docs/cops_chefdeprecations.md#chefdeprecationsresourceusesonlyresourcename)**: detects resources that only set resource_name and automatically adds a provides call as well.
+**[ChefDeprecations/ResourceUsesOnlyResourceName](https://github.com/chef/cookstyle/blob/main/docs/cops_chefdeprecations.md#chefdeprecationsresourceusesonlyresourcename)**: detects resources that only set resource_name and automatically adds a provides call as well.
 
-**[ChefDeprecations/HWRPWithoutProvides](https://github.com/chef/cookstyle/blob/master/docs/cops_chefdeprecations.md#chefdeprecationshwrpwithoutprovides)**: detects legacy HWRPs that don't include the necessary provides and resource_name calls for Chef Infra Client 16.
+**[ChefDeprecations/HWRPWithoutProvides](https://github.com/chef/cookstyle/blob/main/docs/cops_chefdeprecations.md#chefdeprecationshwrpwithoutprovides)**: detects legacy HWRPs that don't include the necessary provides and resource_name calls for Chef Infra Client 16.
 
 ### Chef InSpec 4.20.6
 
@@ -2569,7 +2569,7 @@ Over the last quarter, we worked to greatly expand the platforms that we support
 
 ### Newly Introduced Deprecations
 
-Several legacy Windows helpers have been deprecated as they will always return true when running on Chef Infra Client's currently supported platforms. The helpers previously detected systems prior to Windows 2012 and systems running Windows Nano, which has been discontinued by Microsoft. These helpers were never documented externally so their usage is most likely minimal. A new Cookstyle rule has been introduced to detect the usage of `older_than_win_2012_or_8?`: [ChefDeprecations/DeprecatedWindowsVersionCheck](https://github.com/chef/cookstyle/blob/master/docs/cops_chefdeprecations.md#chefdeprecationsdeprecatedwindowsversioncheck).
+Several legacy Windows helpers have been deprecated as they will always return true when running on Chef Infra Client's currently supported platforms. The helpers previously detected systems prior to Windows 2012 and systems running Windows Nano, which has been discontinued by Microsoft. These helpers were never documented externally so their usage is most likely minimal. A new Cookstyle rule has been introduced to detect the usage of `older_than_win_2012_or_8?`: [ChefDeprecations/DeprecatedWindowsVersionCheck](https://github.com/chef/cookstyle/blob/main/docs/cops_chefdeprecations.md#chefdeprecationsdeprecatedwindowsversioncheck).
 
 - Chef::Platform.supports_msi?
 - Chef::Platform.older_than_win_2012_or_8?
@@ -3243,7 +3243,7 @@ We've also updated the `windows_package` resource. The resource will now provide
 
 Chef Infra Client now includes a new `chef-utils` gem, which ships with a large number of helpers to make writing cookbooks easier. Many of these helpers existed previously in the `chef-sugar` gem. We have renamed many of the named helpers for consistency, while providing backwards compatibility with existing `chef-sugar` names. Existing cookbooks written with `chef-sugar` should work unmodified with any of these new helpers. Expect a Cookstyle rule in the near future to help you update existing `chef-sugar` code to use the newer built-in helpers.
 
-For more information all all of the new helpers available, see the [chef-utils readme](https://github.com/chef/chef/blob/master/chef-utils/README.md)
+For more information all all of the new helpers available, see the [chef-utils readme](https://github.com/chef/chef/blob/main/chef-utils/README.md)
 
 ### Chefignore Improvements
 
@@ -3601,7 +3601,7 @@ Ohai has been updated to 15.1 with the following changes:
 Chef InSpec has been updated from 4.3.2 to 4.6.4 with the following changes:
 
 - InSpec `Attributes` have now been renamed to `Inputs` to avoid confusion with Chef Infra attributes.
-- A new InSpec plugin type of `Input` has been added for defining new input types. See the [InSpec Plugins documentation](https://github.com/inspec/inspec/blob/master/docs/dev/plugins.md#implementing-input-plugins) for more information on writing these plugins.
+- A new InSpec plugin type of `Input` has been added for defining new input types. See the [InSpec Plugins documentation](https://github.com/inspec/inspec/blob/main/docs/dev/plugins.md#implementing-input-plugins) for more information on writing these plugins.
 - InSpec no longer prints errors to the stdout when passing `--format json`.
 - When fetching profiles from GitHub, the URL can now include periods.
 - The performance of InSpec startup has been improved.
@@ -4418,7 +4418,7 @@ Chef 14.9 now supports Ruby 2.6.
 
 ### InSpec 3.2.6
 
-InSpec has been updated from 3.0.64 to 3.2.6 with improved resources for auditing. See the [InSpec changelog](https://github.com/inspec/inspec/blob/master/CHANGELOG.md#v326-2018-12-20) for additional details on this new version.
+InSpec has been updated from 3.0.64 to 3.2.6 with improved resources for auditing. See the [InSpec changelog](https://github.com/inspec/inspec/blob/main/CHANGELOG.md#v326-2018-12-20) for additional details on this new version.
 
 ### powershell_exec Runtimes Bundled
 
@@ -5804,7 +5804,7 @@ description 'The apparmor_policy resource is used to add or remove policy files 
 - Fix Softlayer cloud detection
 - Use the current Azure metadata endpoint
 - Correctly detect macOS guests on VMware and VirtualBox
-- Please see the [Ohai Changelog](https://github.com/chef/ohai/blob/master/CHANGELOG.md) for the complete list of changes.
+- Please see the [Ohai Changelog](https://github.com/chef/ohai/blob/main/CHANGELOG.md) for the complete list of changes.
 
 ## What's New in 13.8.5
 
@@ -7019,7 +7019,7 @@ When Chef Infra Client fails, the output now includes details about the platform
 
 ### Server Enforced Recipe
 
-This release adds support for Server Enforced Recipe, as described in [RFC 896](https://github.com/chef/chef-rfc/blob/master/rfc089-server-enforced-recipe.md) and implemented in Chef Infra Server 12.15. Complete release documentation of this feature will be coming soon.
+This release adds support for Server Enforced Recipe, as described in [RFC 896](https://github.com/chef/chef-rfc/blob/main/rfc089-server-enforced-recipe.md) and implemented in Chef Infra Server 12.15. Complete release documentation of this feature will be coming soon.
 
 ### Bugfixes
 
@@ -7671,7 +7671,7 @@ from previous versions. The short version:
 ### exit_status
 
 When set to `:enabled`, chef-client will use [standardized exit
-codes](https://github.com/chef/chef-rfc/blob/master/rfc062-exit-status.md#exit-codes-in-use)
+codes](https://github.com/chef/chef-rfc/blob/main/rfc062-exit-status.md#exit-codes-in-use)
 for Chef client run status, and any non-standard exit codes will be
 converted to `1` or `GENERIC_FAILURE`. This setting can also be set to
 `:disabled` which preserves the old behavior of using non-standardized
@@ -14038,7 +14038,7 @@ previous versions. The short version:
 - **Changing attributes** Attributes may be modified for named
     precedence levels, all precedence levels, and be fully assigned.
     These changes were [based on
-    RFC-23](https://github.com/chef/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md).
+    RFC-23](https://github.com/chef/chef-rfc/blob/main/rfc023-chef-12-attributes-changes.md).
 - **Ruby 2.0 (or higher) for Windows; and Ruby 2.1 (or higher) for
     Unix/Linux** Ruby versions 1.8.7, 1.9.1, 1.9.2, and 1.9.3 are no
     longer supported. See [this blog
@@ -16369,7 +16369,7 @@ resource must be updated. In previous versions of the chef-client, the
 was included in the `Chef::Provider` base class.
 
 For example, the `lvm_logical_volume` custom resource from the [lvm
-cookbook](https://github.com/chef-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb)
+cookbook](https://github.com/chef-cookbooks/lvm/blob/main/libraries/provider_lvm_logical_volume.rb)
 uses the **directory** and **mount** resources:
 
 ```ruby
@@ -16511,4 +16511,4 @@ be enabled in environments running Chef 12.0 by setting
 
 ## Changelog
 
-<https://github.com/chef/chef/blob/master/CHANGELOG.md>
+<https://github.com/chef/chef/blob/main/CHANGELOG.md>
