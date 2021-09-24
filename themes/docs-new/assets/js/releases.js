@@ -136,9 +136,13 @@ function loadReleaseNotesPage(product) {
   // Automate uses packages.chef.io for version number information with the "current" channel
   // All other products use omnitruck.chef.io with the "stable" channel
   // E.g. https://omnitruck.chef.io/stable/inspec/versions/all
+  // InSpec cloud resource packs don't have release versions deployed anywhere so we store a version file in
+  // static/product-version/PRODUCT.json
 
   if (product === "automate"){
     var versionsURL = "https://packages.chef.io/releases/current/automate.json"
+  } else if (product.startsWith("inspec-") ){
+    var versionsURL = "/product-versions/" + product + ".json"
   } else {
     var versionsURL = "https://omnitruck.chef.io/stable/" + product + "/versions/all"
   }
