@@ -1,9 +1,9 @@
 +++
-title = "Release Notes: Chef Infra Client 12.0 - 17.4"
+title = "Chef Infra Client Release Notes"
 draft = false
-gh_repo = "chef-web-docs"
 aliases = ["/release_notes.html", "/release_notes_ohai.html", "/release_notes/"]
 product = ["client"]
+release_notes = "chef"
 
 [menu]
   [menu.release_notes]
@@ -5878,8 +5878,6 @@ description 'The apparmor_policy resource is used to add or remove policy files 
 - Fix Softlayer cloud detection
 - Use the current Azure metadata endpoint
 - Correctly detect macOS guests on VMware and VirtualBox
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ## Platform Additions
 
@@ -16655,3 +16653,5 @@ be enabled in environments running Chef Infra Client 12.0 by setting
 ## Changelog
 
 <https://github.com/chef/chef/blob/main/CHANGELOG.md>
+=======
+>>>>>>> main
